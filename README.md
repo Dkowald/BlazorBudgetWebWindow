@@ -37,7 +37,7 @@ In order for this program to be debugged, we must add the two JavaScript files a
 **Steve Sanderson's Blog Post - MUST READ**
 
 
-<a href="‎https://blog.stevensanderson.com/2019/11/18/2019-11-18-webwindow-a-cross-platform-webview-for-dotnet-core/" target="_blank">Meet WebWindow, a cross-platform webview library for .NET Core</a>
+<a href="https://blog.stevensanderson.com/2019/11/18/2019-11-18-webwindow-a-cross-platform-webview-for-dotnet-core/" target="_blank">Meet WebWindow, a cross-platform webview library for .NET Core</a>
 
 It's like Electron, but without bundling Node.js or Chromium, and without most of the the APIs.
 
