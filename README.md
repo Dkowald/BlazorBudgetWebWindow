@@ -1,6 +1,8 @@
 ﻿# Blazor Budget Web Window
 A Blazor Budget app, featuring Infragistics Blazor Charts, running in Steve Sanderson's WebWindow!
 
+![Runningapp](runningapp.png)
+
 ## Documentation
 **Steve Sanderson's Blog Post - MUST READ**
 
