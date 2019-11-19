@@ -14,12 +14,13 @@ On **Windows**, you MUST install Chromium Edge.
 <a href="https://www.microsoftedgeinsider.com/en-us/?form=MD18G6&OCID=MD18G6>" target="_blank">Download Chromium Edge</a>
 
 
-## Build and Run, or Publish
-Download or clone the repo and run it.
+## Build and Run
+Download or clone the repo and run it inside Visual Studio.
 
+## Publish
 You can publish the app by right clicking the project title and from the context menu select publish.
 
-You can run the app by double clicking the `BlazorBudgetWebWindow.exe` file.
+You can run the app by double clicking the `BlazorBudgetWebWindow.exe` file as pictured below.
 
 You can also copy the entire `publish` folder to another directory and run it from there.
 
