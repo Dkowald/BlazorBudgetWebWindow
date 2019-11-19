@@ -1,0 +1,53 @@
+﻿@page "/"
+@inherits IndexBase
+
+<header>
+    <img src="images/budget-60x60.png" /> <span>Budgeting</span>
+</header>
+
+<div class="container">
+    <main>
+        <span>Take Home Pay:</span>
+        <span>@TakeHomePay.ToString("c0")</span>
+        <div>
+            <input type="range" min="@MinTakeHomePay" max="5000" step="100"
+                   @bind="TakeHomePay" @bind:event="oninput" style="max-width: 200px" @onchange="TakeHomePayChanged" />
+            <select @onchange="PayFrequencyChanged">
+                @foreach (var item in this.PayFrequencyItems) {
+                    <option value="@item.PayChecksPerYear">@item.Name</option>
+                }
+            </select>
+        </div>
+
+        @foreach (var item in this.BudgetAllocationItems) {
+            <span>@item.Name:</span>
+            <span>@item.Amount.ToString("c0")</span>
+            <input type="range"
+                   step="10"
+                   max="@item.MaxValue"
+                   style="width:@(item.WidthPercent)%"
+                   @onchange="BudgetItemChanged"
+                   @bind="item.Amount" @bind:event="oninput" />
+        }
+
+        <span>Remaining Allocation:</span>
+        <strong>@RemainingAllocation.ToString("c0")</strong>
+        <span>&nbsp;</span>
+
+        <span>Annual Take Home Pay:</span>
+        <strong>@AnnualTakeHomePay.ToString("c0")</strong>
+        <span>&nbsp;</span>
+
+        <span>Annual Savings:</span>
+        <strong>@AnnualSavings.ToString("c0")</strong>
+        <span>&nbsp;</span>
+    </main>
+    <aside>
+        <span>Budget Allocations</span>
+        @if (ShowPieChart) {
+            <PieChart DataSource="@BudgetAllocationItems" LabelMemberPath="Name" ValueMemberPath="Amount" Height="300px" Width="300px" LabelsPosition="LabelsPosition.BestFit" />
+        }
+        <CategoryChart YAxisTitle="Annual Amount" XAxisTitle="Expenses" XAxisLabelAngle="45" DataSource="@AnnualTotalItems" ChartTitle="Annual Expenses" Subtitle="Expenses by Category" ChartType="CategoryChartType.Column" Height="400px" Width="400px" />
+    </aside>
+</div>
+
