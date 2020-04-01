@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Infragistics.Blazor" Version="1.0.0" />
-    <PackageReference Include="WebWindow.Blazor" Version="0.1.0-20191119.2" />
+    <PackageReference Include="WebWindow.Blazor" Version="0.1.0-20200214.9" />
   </ItemGroup>
 
   <ItemGroup>
